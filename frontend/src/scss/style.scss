@@ -29,3 +29,46 @@ body {
     width: 100%;
   }
 }
+
+
+// client
+
+.client-item {
+  background-color: #FFEDD0;
+  border-radius: 1em;
+  border: 2px solid #549EDA;
+
+  .client-name {
+    background-color: #CFF1F6;
+    padding: 2em;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+  }
+
+  .status {
+    height: 20px;
+    width: 20px;
+    margin: 2em;
+    border-radius: 10px;
+  }
+
+  .open-letters {
+    padding: 2em;
+  }
+}
+
+
+// status
+
+
+.green {
+  background-color: #438960;
+}
+
+.red {
+  background-color: #FF7474;
+}
+
+.yellow {
+  background-color: #FBBE37;
+}
