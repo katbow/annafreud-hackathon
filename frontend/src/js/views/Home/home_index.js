@@ -13,6 +13,8 @@ class Home extends React.Component {
             <div className='image-container'>
               <img src='img/rhino.png' />
             </div>
+            <button>Clinician Login</button>
+            <button>Client Login</button>
           </Col>
         </Row>
       </Grid>

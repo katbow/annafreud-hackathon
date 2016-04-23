@@ -15,7 +15,7 @@ const Scripts = require('./routes/Scripts.js')
 const SendNotification = require('./routes/SendNotification.js')
 
 const Plugins = [ Inert ]
-const Routes = [ Images, ReactUrls, Scripts ]
+const Routes = [ Images, ReactUrls, Scripts, SendNotification ]
 
 module.exports = (client) => {
 

@@ -8,6 +8,6 @@ import ClinicianDashboard from './views/ClinicianDashboard/clinician_index.js'
 export default (
   <Route path='/' component={App}>
     <IndexRoute component={Home} />
-    <Route path='/clinician-dashboard' component={ClinicianDashboard} />
+    <Route path='/dashboard' component={ClinicianDashboard} />
   </Route>
 )
