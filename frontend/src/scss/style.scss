@@ -48,13 +48,6 @@ body {
     border-bottom-left-radius: 1em;
   }
 
-  .status {
-    height: 20px;
-    width: 20px;
-    margin: 1em;
-    border-radius: 10px;
-  }
-
   .open-letters {
     padding: 1em;
   }
@@ -84,9 +77,14 @@ body {
   }
 }
 
-
-
 // status
+
+.status {
+  height: 20px;
+  width: 20px;
+  margin: 1em;
+  border-radius: 10px;
+}
 
 .green {
   background-color: #438960;
