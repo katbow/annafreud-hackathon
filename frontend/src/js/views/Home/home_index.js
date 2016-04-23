@@ -1,7 +1,8 @@
 import React from 'react'
-import { Grid, Row, Col } from 'react-bootstrap'
+import { Grid, Row, Col, Button } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { getUserDetails } from '../../actions/actions_index.js'
+import { Link } from 'react-router'
 
 class Home extends React.Component {
   render () {
@@ -10,8 +11,10 @@ class Home extends React.Component {
       <Grid className='home'>
         <Row>
           <Col xs={12}>
-            <button>Clinician Login</button>
-            <button>Client Login</button>
+            <Link to={'/login'}>
+              <Button>Clinician Login</Button>
+            </Link>
+            <Button>Client Login</Button>
           </Col>
         </Row>
       </Grid>
