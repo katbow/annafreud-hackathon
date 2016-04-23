@@ -9,16 +9,12 @@ const handlePlugins = require('./helpers/server-helpers.js')
 const Inert = require('inert')
 
 // server routes
-const Hello = require('./routes/Hello.js')
 const Images = require('./routes/Images.js')
 const ReactUrls = require('./routes/ReactUrls.js')
 const Scripts = require('./routes/Scripts.js')
 
-// auth strategies
-const authStrategies = require('./authStrategies/twitterAuthStrategies.js')
-
 const Plugins = [ Inert ]
-const Routes = [ Images, ReactUrls, Scripts, Hello ]
+const Routes = [ Images, ReactUrls, Scripts ]
 
 module.exports = (client) => {
 
