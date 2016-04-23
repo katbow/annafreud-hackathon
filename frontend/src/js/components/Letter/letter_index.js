@@ -4,25 +4,23 @@ import { Row, Col } from 'react-bootstrap'
 export default class Letter extends Component {
   render () {
     return (
-      <Col className='letter-item' xs={10} xsOffset={1}>
-        <Row>
-          <Col className='stakeholder-name' xs={3}>
+        <Row className='letter-item'>
+          <Col className='stakeholder-name title' xs={2}>
             Teacher
           </Col>
-          <Col className='letter-topic' xs={3}>
+          <Col className='letter-topic title' xs={3}>
             Ellie is cray
           </Col>
-          <Col className='status' xs={2}>
+          <Col className='status title' xs={2}>
             Okay
           </Col>
-          <Col className='priority' xs={2}>
+          <Col className='priority title' xs={2}>
             High
           </Col>
-          <Col className='due' xs={2}>
+          <Col className='due title' xs={2}>
             Tomorrow
           </Col>
         </Row>
-      </Col>
     )
   }
 }
