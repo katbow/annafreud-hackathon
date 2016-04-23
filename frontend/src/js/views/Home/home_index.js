@@ -10,9 +10,6 @@ class Home extends React.Component {
       <Grid className='home'>
         <Row>
           <Col xs={12}>
-            <div className='image-container'>
-              <img src='img/rhino.png' />
-            </div>
             <button>Clinician Login</button>
             <button>Client Login</button>
           </Col>
