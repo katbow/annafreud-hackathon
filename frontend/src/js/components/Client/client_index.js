@@ -7,21 +7,24 @@ import AddLetter from '../AddLetter/addLetter_index.js'
 class Client extends React.Component {
   constructor () {
     super()
-    this.state = { open: false }
+    this.state = {
+      panelOpen: false,
+      modalOpen: false
+    }
   }
 
   render () {
     return (
       <div>
-        <Row onClick={() => {this.setState({ open: !this.state.open })}}>
+        <Row onClick={() => { this.setState({ panelOpen: !this.state.panelOpen }) }}>
           <ClientItem open={this.state.open} />
         </Row>
         <Row>
           <Col className='letters' xs={10} xsOffset={1}>
-            <Panel collapsible expanded={this.state.open}>
+            <Panel collapsible expanded={this.state.panelOpen}>
               <Letter />
             </Panel>
-            <AddLetter />
+            <AddLetter onClick={() => { this.setState({ modalOpen: !this.state.modalOpen }) }}/>
           </Col>
         </Row>
       </div>
