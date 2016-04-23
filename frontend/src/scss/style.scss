@@ -34,13 +34,12 @@ body {
 // client
 
 .client-item {
-  background-color: #FFEDD0;
+  background-color: #FFECCE;
   border-radius: 1em;
-  border: 2px solid #549EDA;
 
   .client-name {
     background-color: #CFF1F6;
-    padding: 2em;
+    padding: 1em;
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
   }
@@ -48,18 +47,27 @@ body {
   .status {
     height: 20px;
     width: 20px;
-    margin: 2em;
+    margin: 1em;
     border-radius: 10px;
   }
 
   .open-letters {
-    padding: 2em;
+    padding: 1em;
+  }
+}
+
+.letters {
+  padding: 0;
+
+  .panel {
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
   }
 }
 
 
 // status
-
 
 .green {
   background-color: #438960;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Nav } from 'react-bootstrap'
+import { Navbar } from 'react-bootstrap'
 import { Link } from 'react-router'
 
 export default class Header extends React.Component {
@@ -10,7 +10,7 @@ export default class Header extends React.Component {
           <Navbar.Header>
             <Navbar.Brand>
               <Link to={'/'}>
-                <img src={this.props.logoUrl}></img>
+                <img src={this.props.logoUrl} />
               </Link>
             </Navbar.Brand>
           </Navbar.Header>
