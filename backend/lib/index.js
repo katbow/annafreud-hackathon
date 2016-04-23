@@ -1,9 +1,7 @@
 require('env2')('./config.env')
 const createServer = require('./server.js')
-const createClient = require('./redis/client.js')
 
-const client = createClient()
-const server = createServer(client)
+const server = createServer()
 
 server.start((err) => {
   if (err) {
