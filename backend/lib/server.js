@@ -13,12 +13,11 @@ const Hello = require('./routes/Hello.js')
 const Images = require('./routes/Images.js')
 const ReactUrls = require('./routes/ReactUrls.js')
 const Scripts = require('./routes/Scripts.js')
+const SendNotification = require('./routes/SendNotification.js')
 
-// auth strategies
-const authStrategies = require('./authStrategies/twitterAuthStrategies.js')
 
 const Plugins = [ Inert ]
-const Routes = [ Images, ReactUrls, Scripts, Hello ]
+const Routes = [ Images, ReactUrls, Scripts, Hello, SendNotification ]
 
 module.exports = (client) => {
 
