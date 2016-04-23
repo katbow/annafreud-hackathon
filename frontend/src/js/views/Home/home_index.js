@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { getUserDetails } from '../../actions/actions_index.js'
+import { Link } from 'react-router'
 
 class Home extends React.Component {
   render () {
@@ -13,7 +14,9 @@ class Home extends React.Component {
             <div className='image-container'>
               <img src='img/rhino.png' />
             </div>
-            <button>Clinician Login</button>
+            <Link to={'/login'}>
+              <button>Clinician Login</button>
+            </Link>
             <button>Client Login</button>
           </Col>
         </Row>
