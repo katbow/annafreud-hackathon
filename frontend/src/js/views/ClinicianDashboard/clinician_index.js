@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 
+import Letter from '../../components/Letter/letter_index.js'
+
 export default class ClinicianDashboard extends Component {
   render () {
     return (
       <div>
-        <h1>I am on the Clinician Dashboard</h1>
+        <Letter />
       </div>
     )
   }
