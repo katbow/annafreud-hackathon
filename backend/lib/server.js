@@ -9,15 +9,13 @@ const handlePlugins = require('./helpers/server-helpers.js')
 const Inert = require('inert')
 
 // server routes
-const Hello = require('./routes/Hello.js')
 const Images = require('./routes/Images.js')
 const ReactUrls = require('./routes/ReactUrls.js')
 const Scripts = require('./routes/Scripts.js')
 const SendNotification = require('./routes/SendNotification.js')
 
-
 const Plugins = [ Inert ]
-const Routes = [ Images, ReactUrls, Scripts, Hello, SendNotification ]
+const Routes = [ Images, ReactUrls, Scripts, SendNotification ]
 
 module.exports = (client) => {
 

@@ -1,6 +1,6 @@
 const messagebird = require('messagebird')(process.env.API_KEY)
 
-export default {
+module.exports = {
   method: 'GET',
   path: '/sendNotification',
   handler: (req, reply) => {
