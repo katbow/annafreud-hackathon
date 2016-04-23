@@ -3,7 +3,7 @@ import { Row, Col, Panel } from 'react-bootstrap'
 import StatusIcon from '../StatusIcon/statusIcon_index.js'
 
 const ClientItem = (props) => {
-  return (
+  const closedItem = (
     <Col className='client-item' xs={10} xsOffset={1}>
       <Row>
         <Col className='client-name' xs={2}>
@@ -18,6 +18,28 @@ const ClientItem = (props) => {
       </Row>
     </Col>
   )
+  const openItem = (
+    <Col className='client-item' xs={10} xsOffset={1}>
+      <Row>
+        <Col className='client-name' xs={2}>
+          <p>{props.firstName}</p>
+        </Col>
+        <Col className='title' xs={3} xsOffset={1}>
+          <p>topic</p>
+        </Col>
+        <Col className='title' xs={2}>
+          <p>Status</p>
+        </Col>
+        <Col className='title' xs={2}>
+          <p>Priority</p>
+        </Col>
+        <Col className='title' xs={2}>
+          <p>due</p>
+        </Col>
+      </Row>
+    </Col>
+  )
+  return props.open ? openItem : closedItem
 }
 
 ClientItem.defaultProps = {

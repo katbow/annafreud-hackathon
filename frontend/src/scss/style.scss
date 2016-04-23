@@ -33,6 +33,10 @@ body {
 
 // client
 
+.title {
+  margin: 1em 0;
+}
+
 .client-item {
   background-color: #FFECCE;
   border-radius: 1em;
@@ -54,6 +58,10 @@ body {
   .open-letters {
     padding: 1em;
   }
+
+  .topic {
+    margin: 1em;
+  }
 }
 
 .letters {
@@ -64,7 +72,18 @@ body {
     box-shadow: none;
     -webkit-box-shadow: none;
   }
+
+  .panel-body {
+    padding: 0;
+  }
+
+  .letter-item {
+    border: 0.5px solid #8D8D8D;
+    border-radius: 15px;
+    margin: 0;
+  }
 }
+
 
 
 // status
