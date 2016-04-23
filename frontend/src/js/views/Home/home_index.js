@@ -13,8 +13,6 @@ class Home extends React.Component {
             <div className='image-container'>
               <img src='img/rhino.png' />
             </div>
-            <p>Your app goes here...</p>
-            <a href='/login-with-twitter'>login with twitter</a>
           </Col>
         </Row>
       </Grid>
