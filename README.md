@@ -16,8 +16,12 @@ const clients = [ // array of objects
     id: 1, // int
     firstName: 'Sarah', // string
     lastName: 'Jones', // string
-    mobileNumber: 0750751234, // int
+    mobileNumber: '0750751234', // string
     assessmentCompleted: true // boolean,
+    clinician: {
+      name: 'Dr. Rudolph Krantz',
+      number: '07865342478'
+    },
     letters: [ // array of objects
       {
         id: 7, // int,
@@ -25,6 +29,7 @@ const clients = [ // array of objects
         stakeholder: { // obj
           id: 9, // int
           name: 'St. Widget\'s College' // string
+          relationship: 'School' // string
         }
       },
       {
