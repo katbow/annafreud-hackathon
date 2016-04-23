@@ -9,7 +9,7 @@ const ClientItem = (props) => {
         <Col className='client-name' xs={2}>
           <p>{props.firstName}</p>
         </Col>
-        <Col className='open-letters' xs={3} xsOffset={4}>
+        <Col className='open-letters' xsOffset={3} xs={3}>
           <p>{props.numberOfLetters} open letters</p>
         </Col>
         <Col className='status-icon' xs={1}>
@@ -24,16 +24,16 @@ const ClientItem = (props) => {
         <Col className='client-name' xs={2}>
           <p>{props.firstName}</p>
         </Col>
-        <Col className='title' xs={3} xsOffset={1}>
+        <Col className='title' xs={3}>
           <p>topic</p>
         </Col>
-        <Col className='title' xs={2}>
+        <Col className='title' xs={3}>
           <p>Status</p>
         </Col>
         <Col className='title' xs={2}>
           <p>Priority</p>
         </Col>
-        <Col className='title' xs={2}>
+        <Col className='title' xs={1}>
           <p>due</p>
         </Col>
       </Row>

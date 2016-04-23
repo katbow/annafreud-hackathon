@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'react-bootstrap'
+import StatusButton from '../StatusButton/StatusButton_index.js'
+import StatusIcon from '../StatusIcon/statusIcon_index.js'
 
 export default class Letter extends Component {
   render () {
@@ -9,13 +11,13 @@ export default class Letter extends Component {
             Teacher
           </Col>
           <Col className='letter-topic title' xs={3}>
-            Ellie is cray
+            Assessment letter
           </Col>
-          <Col className='status title' xs={2}>
-            Okay
+          <Col className='title' xs={3}>
+            <StatusButton />
           </Col>
-          <Col className='priority title' xs={2}>
-            High
+          <Col className='priority' xs={2}>
+            <StatusIcon status='red' />
           </Col>
           <Col className='due title' xs={2}>
             Tomorrow
