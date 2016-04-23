@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
+import { Grid, Row } from 'react-bootstrap'
+import Client from '../../components/Client/client_index.js'
 
 export default class ClinicianDashboard extends Component {
   render () {
     return (
-      <div>
-        <h1>I am on the Clinician Dashboard</h1>
-      </div>
+      <Grid>
+        <Row>
+          <Client />
+        </Row>
+      </Grid>
     )
   }
 }
