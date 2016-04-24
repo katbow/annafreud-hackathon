@@ -26,6 +26,8 @@ module.exports = [
       const client = findClient(parseInt(request.params.id))
       const params = messageBirdParams(client.number, templates[1](client))
 
+      if (client.assessmentCompleted) return reply('assessment status updated')
+
       client.assessmentCompleted = true
 
       messageBird.messages.create(params, (err, response) => {

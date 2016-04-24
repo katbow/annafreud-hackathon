@@ -17,10 +17,11 @@ body {
   height: 50px;
 }
 
-.title {
+.brand-title {
   float: right;
   font-family: 'Oswald', sans-serif;
-  color: #CFF1F6;
+  color: $light-blue;
+  margin-top: 28px;
 }
 
 .top-menu .navbar-brand {
@@ -73,6 +74,7 @@ body {
 .client-item {
   background-color: #FFECCE;
   border-radius: 1em;
+  cursor: pointer;
 
   .client-name {
     background-color: #CFF1F6;
@@ -138,11 +140,13 @@ body {
 }
 .addletter {
   display: inline-block;
+  cursor: pointer;
+  margin-bottom: 30px;
 }
 .homepagebutton {
-  height: 58px;
+  height: 44px;
     color: grey;
-    font-size: 1.5em;
+    font-size: 1.1em;
     background-color: #ffecce;
     border: none;
     margin: 1em;
@@ -159,4 +163,8 @@ body {
   height: 26px;
   margin: 5px 5px;
   padding: 1em;
+}
+
+.btn-default:hover {
+  background-color: $light-blue;
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 import { Panel, Row, Col, Modal, Button } from 'react-bootstrap'
 import ClientItem from './clientItem.js'
 import Letter from '../Letter/letter_index.js'
@@ -12,17 +13,25 @@ class Client extends React.Component {
       showModal: false
     }
     this.toggleModal = this.toggleModal.bind(this)
+    this.toggleModal = this.toggleModal.bind(this)
   }
 
   toggleModal () {
-    console.log('CLICKED', this)
     this.setState({ showModal: !this.state.showModal })
   }
 
+  sendNotification () {
+    axios.put('/api/clients/' + this.props.id + '/setAssessmentComplete')
+  }
+
   render () {
+    console.log(this.props, 'client index')
     return (
       <div>
-        <Row onClick={() => { this.setState({ panelOpen: !this.state.panelOpen }) }}>
+        <Row onClick={() => {
+            this.setState({ panelOpen: !this.state.panelOpen })
+            this.sendNotification()
+          }}>
           <ClientItem open={this.state.panelOpen} {...this.props} />
         </Row>
         <Row>

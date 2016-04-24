@@ -7,7 +7,7 @@ export default class Header extends React.Component {
     return (
       <div>
         <Navbar className='top-menu'>
-        <h2 className='title'>SharePlan</h2>
+        <h2 className='brand-title'>SharePlan</h2>
           <Navbar.Header>
             <Navbar.Brand>
               <Link to={'/'}>
