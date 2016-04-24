@@ -1,12 +1,9 @@
 import React from 'react'
 import { Grid, Row, Col, Button } from 'react-bootstrap'
-import { connect } from 'react-redux'
-import { getUserDetails } from '../../actions/actions_index.js'
 import { Link } from 'react-router'
 
-class Home extends React.Component {
+export default class Home extends React.Component {
   render () {
-    console.log(this.props)
     return (
       <Grid className='home'>
         <Row>
@@ -21,11 +18,3 @@ class Home extends React.Component {
     )
   }
 }
-
-const mapStateToProps = (state) => {
-  return {
-    userDetails: state.userDetails
-  }
-}
-
-export default connect(mapStateToProps, { getUserDetails })(Home)
