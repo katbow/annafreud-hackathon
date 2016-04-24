@@ -14,12 +14,12 @@ class Client extends React.Component {
     return (
       <div>
         <Row onClick={() => {this.setState({ open: !this.state.open })}}>
-          <ClientItem open={this.state.open} />
+          <ClientItem open={this.state.open} {...this.props} />
         </Row>
         <Row>
           <Col className='letters' xs={10} xsOffset={1}>
             <Panel collapsible expanded={this.state.open}>
-              <Letter />
+              {this.props.letters.map(singleLetter => <Letter {...singleLetter.stakeholder} key={singleLetter.id} />)}
             </Panel>
             <AddLetter />
           </Col>

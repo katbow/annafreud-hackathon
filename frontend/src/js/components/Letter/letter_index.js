@@ -8,7 +8,7 @@ export default class Letter extends Component {
     return (
         <Row className='letter-item'>
           <Col className='stakeholder-name title' xs={2}>
-            Teacher
+            {this.props.relationship}
           </Col>
           <Col className='letter-topic title' xs={3}>
             Assessment letter

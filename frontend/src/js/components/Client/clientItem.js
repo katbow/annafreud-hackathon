@@ -10,7 +10,7 @@ const ClientItem = (props) => {
           <p>{props.firstName}</p>
         </Col>
         <Col className='open-letters' xsOffset={3} xs={3}>
-          <p>{props.numberOfLetters} open letters</p>
+          <p>{props.letters.length} open letters</p>
         </Col>
         <Col className='status-icon' xs={1}>
           <StatusIcon status='red'/>
