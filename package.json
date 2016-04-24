@@ -4,12 +4,11 @@
   "description": "Some boilerplate to get us off to a quick start at hackathons",
   "main": "index.js",
   "scripts": {
-    "nodemon": "nodemon backend/lib/index.js",
+    "nodemon": "nodemon --debug backend/lib/index.js",
     "dev": "webpack-dev-server --hot --inline --content-base public/",
     "watch": "webpack --watch --progress",
     "start": "node ./backend/lib/index.js",
-    "pretest": "npm run server-build",
-    "test": "node ./backend/lib/tests/runner.js"
+    "test": "tape test/*.js"
   },
   "repository": {
     "type": "git",
