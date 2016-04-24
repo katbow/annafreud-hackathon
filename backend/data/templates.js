@@ -11,5 +11,8 @@ module.exports = {
   `,
   4: (client, letter) => `
     ${client.firstName}, the letter to ${letter.stakeholder.name} has now been posted out. Please contact ${client.clinician.name} at ${client.clinician.number} for any further information.
+  `,
+  5: (stakeholder, client) => `
+    ${stakeholder}, your assessment letter regarding ${client.firstName} ${client.lastName} has now been completed and will soon be posted out. Please contact ${client.clinician.name} at ${client.clinician.number} for any further information.
   `
 }

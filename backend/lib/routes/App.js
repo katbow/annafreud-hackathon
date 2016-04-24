@@ -24,10 +24,11 @@ module.exports = [
     method: 'PUT',
     handler: (request, reply) => {
       const client = findClient(parseInt(request.params.id))
+      const params = messageBirdParams(client.number, templates[1](client))
 
       client.assessmentCompleted = true
 
-      messageBird.messages.create(messageBirdParams(client, 1), (err, response) => {
+      messageBird.messages.create(params, (err, response) => {
         if (err) {
           console.log(err)
           return reply(err)
@@ -45,14 +46,24 @@ module.exports = [
       const client = findClient(request.params.id)
       const letter = findLetter(client.letters, request.params.letterId)
       const newStatus = parseInt(request.params.status)
+      const template = templates[newStatus](client, letter)
 
       letter.status = newStatus
 
-      messageBird.messages.create(messageBirdParams(client, newStatus, letter), (err, response) => {
+      messageBird.messages.create(messageBirdParams(client.number, template), (err, response) => {
         if (err) {
           console.log(err)
           return reply(err)
         }
+
+        if (newStatus === 3) {
+          // Send SMS to stakeholder also.
+          messageBird.messages.create(messageBirdParams(
+            letter.stakeholder.number,
+            templates[5](letter.stakeholder.name, client)),
+          _ => _)
+        }
+
         console.log(response)
         reply('status updated')
       })
@@ -77,12 +88,12 @@ function findLetter (letters, letterId) {
   }, null)
 }
 
-function messageBirdParams (client, templateId, letter) {
+function messageBirdParams (number, template) {
   return {
     originator: process.env.ORIGINATOR,
     recipients: [
-      client.mobileNumber
+      number
     ],
-    body: templates[templateId](client, letter)
+    body: template
   }
 }
