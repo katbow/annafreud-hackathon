@@ -25,7 +25,6 @@ class Client extends React.Component {
   }
 
   render () {
-    console.log(this.props, 'client index')
     return (
       <div>
         <Row onClick={() => {
