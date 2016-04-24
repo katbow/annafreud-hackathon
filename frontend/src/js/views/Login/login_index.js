@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button } from 'react-bootstrap'
 import { Link } from 'react-router'
 
 export default class Login extends Component {
@@ -8,7 +9,7 @@ export default class Login extends Component {
         <input type='text' placeholder='id' />
         <input type='password' placeholder='password'/>
         <Link to={'/dashboard'}>
-          <button>Submit</button>
+          <Button>Submit</Button>
         </Link>
       </div>
     )
