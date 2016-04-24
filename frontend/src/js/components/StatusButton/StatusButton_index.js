@@ -10,16 +10,25 @@ class StatusButton extends React.Component {
       statusList: ['Pre-start', 'In Progress', 'Ready', 'Sent']
     }
     this.changeStatus = this.changeStatus.bind(this)
+    this.renderOptions = this.renderOptions.bind(this)
   }
 
   changeStatus (e) {
+    // debugger
     const statusCode = e.target.getAttribute('data-status')
     this.setState({ statusName: this.state.statusList[statusCode-1] })
-    const url = '/api/clients/' + this.props.clientId + '/letters/' + this.props.stakeholder.id + '/' + statusCode
+    const url = '/api/clients/' + this.props.clientId + '/letters/' + this.props.id + '/' + statusCode
     axios.put(url)
   }
 
+  renderOptions () {
+    const i = this.state.statusList.indexOf(this.state.statusName)
+    const menuItems = this.state.statusList.slice(i, this.state.statusList.length)
+    return menuItems.map((item, j) => <MenuItem data-status={j + 1} eventKey={j + 1}>{item}</MenuItem>)
+  }
+
   render () {
+    // this.renderOptions()
     return (
       <SplitButton
         bsStyle='primary'
@@ -27,10 +36,7 @@ class StatusButton extends React.Component {
         title={this.state.statusName}
         onSelect={this.changeStatus}
       >
-        <MenuItem data-status='1' eventKey='1'>Pre-start</MenuItem>
-        <MenuItem data-status='2' eventKey='2'> In progress</MenuItem>
-        <MenuItem data-status='3' eventKey='3'>Completed, ready to post</MenuItem>
-        <MenuItem data-status='4' eventKey='4'>Sent</MenuItem>
+        {this.renderOptions()}
       </SplitButton>
     )
   }

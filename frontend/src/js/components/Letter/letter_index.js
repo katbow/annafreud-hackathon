@@ -7,9 +7,7 @@ export default class Letter extends Component {
   render () {
     return (
         <Row className='letter-item'>
-          <Col className='name title' xs={2}>
-
-          </Col>
+          <Col className='name title' xs={2} />
           <Col className='stakeholder-topic title' xs={3}>
             {this.props.stakeholder.name} ({this.props.stakeholder.relationship})
           </Col>
