@@ -30,6 +30,17 @@ body {
   }
 }
 
+.form-line {
+  margin-top: 15px;
+  .label-form {
+    text-align: right;
+    width: 100%;
+  }
+  .input-form {
+    width: 80%;
+  }
+}
+
 
 // client
 

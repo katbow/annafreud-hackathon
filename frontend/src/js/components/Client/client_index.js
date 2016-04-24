@@ -7,7 +7,10 @@ import AddLetter from '../AddLetter/addLetter_index.js'
 class Client extends React.Component {
   constructor () {
     super()
-    this.state = { open: false }
+    this.state = {
+      panelOpen: false,
+      modalOpen: false
+    }
   }
 
   render () {
@@ -19,9 +22,12 @@ class Client extends React.Component {
         <Row>
           <Col className='letters' xs={10} xsOffset={1}>
             <Panel collapsible expanded={this.state.open}>
-              {this.props.letters.map(singleLetter => <Letter {...singleLetter.stakeholder} key={singleLetter.id} />)}
+              {this.props.letters.map(singleLetter =>
+                <Letter {...singleLetter.stakeholder} key={singleLetter.id} />)}
             </Panel>
-            <AddLetter />
+            <AddLetter
+              onClick={() => {this.setState({modalOpen: !this.state.modalOpen})}}
+            />
           </Col>
         </Row>
       </div>
