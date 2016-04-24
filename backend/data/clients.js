@@ -4,7 +4,6 @@ module.exports = [
     firstName: 'Ellie',
     lastName: 'Ottawa',
     number: '07427623314',
-    //number: process.env.RONAN,
     assessmentCompleted: false,
     clinician: {
       name: 'Dr. Rudolph Krantz',
@@ -35,7 +34,7 @@ module.exports = [
   },
   {
     id: 10,
-    firstName: 'Marty',
+    firstName: 'Stewart',
     lastName: 'McFly',
     number: '07511111111',
     assessmentCompleted: true,

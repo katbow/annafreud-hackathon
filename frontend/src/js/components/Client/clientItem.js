@@ -7,7 +7,7 @@ const ClientItem = (props) => {
     <Col className='client-item' xs={10} xsOffset={1}>
       <Row>
         <Col className='client-name' xs={2}>
-          <p>{props.firstName}</p>
+          <p>{props.firstName + ' ' +  props.lastName}</p>
         </Col>
         <Col className='open-letters' xsOffset={3} xs={3}>
           <p>{props.letters.length} open letters</p>
@@ -22,7 +22,7 @@ const ClientItem = (props) => {
     <Col className='client-item' xs={10} xsOffset={1}>
       <Row>
         <Col className='client-name' xs={2}>
-          <p>{props.firstName}</p>
+          <p>{props.firstName + ' ' +  props.lastName}</p>
         </Col>
         <Col className='title' xs={3}>
           <p>Stakeholders</p>
@@ -40,11 +40,6 @@ const ClientItem = (props) => {
     </Col>
   )
   return props.open ? openItem : closedItem
-}
-
-ClientItem.defaultProps = {
-  firstName: 'Ellie',
-  numberOfLetters: 3
 }
 
 export default ClientItem
