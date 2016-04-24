@@ -17,7 +17,6 @@ class Client extends React.Component {
   }
 
   toggleModal () {
-    console.log('CLICKED', this)
     this.setState({ showModal: !this.state.showModal })
   }
 
