@@ -1,19 +1,16 @@
 import React, { Component } from 'react'
 import {Grid, Row, Col, Modal, Form, FormGroup, FormControl, ControlLabel, Button} from 'react-bootstrap'
 
-export default class AddLetter extends Component {
+export default class AddLetterModal extends Component {
 
   render () {
     return (
-      <div>
-        <div className='static-modal'>
-          <Modal.Dialog>
-            <Modal.Header>
-              <Modal.Title>Letter Dashboard</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-
-
+      <div className='static-modal'>
+        <Modal show={this.state.showModal} onHide={this.close}>
+          <Modal.Header closeButton>
+            <Modal.Title>Add New Letter</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
             <form>
               <Row>
                 <div className="form-line">
@@ -71,15 +68,11 @@ export default class AddLetter extends Component {
               </Row>
 
             </form>
-
-
             </Modal.Body>
-            <Modal.Footer>
-              <Button>Close</Button>
-              <Button bsStyle='primary'>Send</Button>
-            </Modal.Footer>
-          </Modal.Dialog>
-        </div>
+          <Modal.Footer>
+            <Button onClick={this.close}>Close</Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     )
   }
