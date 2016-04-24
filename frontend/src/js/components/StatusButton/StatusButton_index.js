@@ -43,10 +43,6 @@ class StatusButton extends React.Component {
   }
 
   render () {
-    // this.renderOptions()
-      //statusName: 'Pre-start',
-      //status: 1,
-    //debugger
     return (
       <SplitButton
         bsStyle='primary'
