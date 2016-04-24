@@ -143,7 +143,7 @@ body {
   cursor: pointer;
   margin-bottom: 30px;
 }
-.homepagebutton {
+.homepagebutton, .login-btn {
   height: 44px;
     color: grey;
     font-size: 1.1em;
@@ -155,14 +155,16 @@ body {
 .login-container {
   margin: 0 auto;
   text-align: center;
+  width: 100%;
 }
 
 .login-input {
   border: none;
-  background-color: lightgray;
+  background-color: $light-blue;
   height: 26px;
   margin: 5px 5px;
   padding: 1em;
+  width: 100%;
 }
 
 .btn-default:hover {
