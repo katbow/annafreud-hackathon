@@ -10,7 +10,7 @@ class Client extends React.Component {
     super()
     this.state = {
       panelOpen: false,
-      modalOpen: false
+      showModal: false
     }
   }
 
@@ -25,7 +25,7 @@ class Client extends React.Component {
             <Panel collapsible expanded={this.state.panelOpen}>
               <Letter />
             </Panel>
-            <AddLetter onClick={() => { this.setState({ modalOpen: !this.state.modalOpen }) }}/>
+            <AddLetter onClick={() => { this.setState({ showModal: !this.state.showModal }) }}/>
             <AddLetterModal />
           </Col>
         </Row>
