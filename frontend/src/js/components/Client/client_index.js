@@ -27,7 +27,7 @@ class Client extends React.Component {
         </Row>
         <Row>
           <Col className='letters' xs={10} xsOffset={1}>
-            <Panel collapsible expanded={this.state.open}>
+            <Panel collapsible expanded={this.state.panelOpen}>
               {this.props.letters.map(singleLetter =>
                 <Letter {...singleLetter} clientId={this.props.id} key={singleLetter.id} />)}
             </Panel>
