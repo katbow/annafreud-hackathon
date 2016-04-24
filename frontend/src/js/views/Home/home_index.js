@@ -9,9 +9,14 @@ export default class Home extends React.Component {
         <Row>
           <Col xs={12}>
             <Link to={'/login'}>
-              <Button>Clinician Login</Button>
+              <Button className='homepagebutton'>Clinician Login</Button>
             </Link>
-            <Button>Client Login</Button>
+            <Button className='homepagebutton'>Client Login</Button>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12}>
+            <img className='big-logo' src='/img/logo.png' />
           </Col>
         </Row>
       </Grid>
