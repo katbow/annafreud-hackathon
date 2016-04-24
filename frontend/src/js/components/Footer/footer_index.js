@@ -9,7 +9,7 @@ export default (props) => {
         </Navbar.Brand>
       </Navbar.Header>
       <Nav pullRight>
-        <p>© FAC7 2016</p>
+        <p>© FAC7 & Ronan 2016</p>
       </Nav>
     </Navbar>
   )
