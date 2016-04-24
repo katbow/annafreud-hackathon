@@ -14,6 +14,11 @@ export default class Home extends React.Component {
             <Button>Client Login</Button>
           </Col>
         </Row>
+        <Row>
+          <Col xs={12}>
+            <img className='big-logo' src='/img/logo.png' />
+          </Col>
+        </Row>
       </Grid>
     )
   }
