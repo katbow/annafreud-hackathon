@@ -12,9 +12,11 @@ export default class Login extends Component {
             <div className='login-container'>
               <input className='login-input' type='text' placeholder='id' />
               <input className='login-input' type='password' placeholder='password'/>
-              <Link to={'/dashboard'}>
-                <Button className='login-btn'>Submit</Button>
-              </Link>
+              <div>
+                <Link to={'/dashboard'}>
+                  <Button className='login-btn'>Submit</Button>
+                </Link>
+              </div>
             </div>
           </Col>
           <Col xs={4} />
