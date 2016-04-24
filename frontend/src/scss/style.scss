@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'bootstrap-navbar';
+@import url(https://fonts.googleapis.com/css?family=Oswald|Raleway);
 
 html {
   position: relative;
@@ -9,11 +10,27 @@ html {
 body {
   font-family: $main-font;
   margin-bottom: $footer-height;
+  font-family: 'Raleway', sans-serif;
+}
+
+.header-spacing {
+  height: 50px;
+}
+
+.title {
+  float: right;
+  font-family: 'Oswald', sans-serif;
+  color: #CFF1F6;
 }
 
 .top-menu .navbar-brand {
   width: 5.5em;
   padding: 6px 15px;
+}
+
+.big-logo {
+  margin: 30px 30px;
+  width: 35%;
 }
 
 .about h3 {
@@ -121,4 +138,12 @@ body {
 }
 .addletter {
   display: inline-block;
+}
+.homepagebutton {
+  height: 58px;
+    color: grey;
+    font-size: 1.5em;
+    background-color: #ffecce;
+    border: none;
+    margin: 1em;
 }
