@@ -34,7 +34,7 @@ class StatusButton extends React.Component {
     })
 
     const url = '/api/clients/' + this.props.clientId + '/letters/' + this.props.id + '/' + statusCode
-    axios.put(url, (res) => console.log(res))
+    axios.put(url)
   }
 
   renderOptions () {

@@ -38,9 +38,9 @@ module.exports = [
     firstName: 'Marty',
     lastName: 'McFly',
     number: '07511111111',
-    assessmentCompleted: false,
+    assessmentCompleted: true,
     clinician: {
-      name: 'Dr. Rudolph Krantz',
+      name: 'Dr. Brian Planter',
       number: '07865342478'
     },
     letters: [
@@ -55,11 +55,42 @@ module.exports = [
       },
       {
         id: 12,
-        status: 1,
+        status: 2,
         stakeholder: {
           id: 14,
           name: 'Clapton Academy',
           relationship: 'School'
+        }
+      },
+      {
+        id: 13,
+        status: 3,
+        stakeholder: {
+          id: 14,
+          name: 'Bruce Wayne',
+          relationship: 'Friend'
+        }
+      }
+    ]
+  },
+  {
+    id: 20,
+    firstName: 'Andrew',
+    lastName: 'Grinch',
+    number: '075111876543',
+    assessmentCompleted: false,
+    clinician: {
+      name: 'Dr. Kinky Boots',
+      number: '07865342478'
+    },
+    letters: [
+      {
+        id: 11,
+        status: 1,
+        stakeholder: {
+          id: 13,
+          name: 'Dr. Druscilla Flatchett',
+          relationship: 'GP'
         }
       }
     ]
