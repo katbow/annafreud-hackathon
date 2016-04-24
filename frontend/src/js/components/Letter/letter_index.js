@@ -12,7 +12,7 @@ export default class Letter extends Component {
             {this.props.stakeholder.name} ({this.props.stakeholder.relationship})
           </Col>
           <Col className='title' xs={3}>
-            <StatusButton {...this.props} />
+            <StatusButton clientId={this.props.clientId} id={this.props.id} status={this.props.status} />
           </Col>
           <Col className='priority' xs={2}>
             <StatusIcon status='red' />

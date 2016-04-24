@@ -3,37 +3,55 @@ import { SplitButton, MenuItem } from 'react-bootstrap'
 import axios from 'axios'
 
 class StatusButton extends React.Component {
-  constructor () {
+  constructor (props) {
     super()
     this.state = {
-      statusName: 'Pre-start',
-      statusList: ['Pre-start', 'In Progress', 'Ready', 'Sent']
+      id: props.id,
+      status: props.status,
+      clientId: props.clientId,
+      statusList: [
+        {id: 1, name: 'Pre-start'},
+        {id: 2, name: 'In Progress'},
+        {id: 3, name: 'Ready'},
+        {id: 4, name: 'Sent'}
+      ],
+      statuses: {
+        1: 'Pre-start',
+        2: 'In Progress',
+        3: 'Ready',
+        4: 'Sent'
+      }
     }
     this.changeStatus = this.changeStatus.bind(this)
     this.renderOptions = this.renderOptions.bind(this)
   }
 
   changeStatus (e) {
-    // debugger
     const statusCode = e.target.getAttribute('data-status')
-    this.setState({ statusName: this.state.statusList[statusCode-1] })
+    this.setState({
+      statusName: this.state.statuses[statusCode],
+      status: parseInt(statusCode)
+    })
+
     const url = '/api/clients/' + this.props.clientId + '/letters/' + this.props.id + '/' + statusCode
-    axios.put(url)
+    axios.put(url, (res) => console.log(res))
   }
 
   renderOptions () {
-    const i = this.state.statusList.indexOf(this.state.statusName)
-    const menuItems = this.state.statusList.slice(i, this.state.statusList.length)
-    return menuItems.map((item, j) => <MenuItem data-status={j + 1} eventKey={j + 1}>{item}</MenuItem>)
+    const menuItems = this.state.statusList.filter(x => x.id > this.state.status)
+    return menuItems.map((item) => <MenuItem key={item.id} data-status={item.id} eventKey={item.id}>{item.name}</MenuItem>)
   }
 
   render () {
     // this.renderOptions()
+      //statusName: 'Pre-start',
+      //status: 1,
+    //debugger
     return (
       <SplitButton
         bsStyle='primary'
         id='split-button-basic'
-        title={this.state.statusName}
+        title={this.state.statuses[this.state.status]}
         onSelect={this.changeStatus}
       >
         {this.renderOptions()}
