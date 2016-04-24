@@ -2,10 +2,12 @@ import React, { Component } from 'react'
 import {Row, Col, Modal, Button} from 'react-bootstrap'
 
 export default class AddLetterModal extends Component {
-
+  constructor () {
+    super()
+  }
   render () {
     return (
-      <Modal show={this.state.showModal} onHide={this.close}>
+      <Modal show={this.props.showModal} onHide={this.close}>
         <Modal.Header closeButton>
           <Modal.Title>Add New Letter</Modal.Title>
         </Modal.Header>
