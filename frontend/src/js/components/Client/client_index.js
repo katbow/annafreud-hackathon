@@ -16,15 +16,18 @@ class Client extends React.Component {
   render () {
     return (
       <div>
-        <Row onClick={() => { this.setState({ panelOpen: !this.state.panelOpen }) }}>
-          <ClientItem open={this.state.open} />
+        <Row onClick={() => {this.setState({ open: !this.state.open })}}>
+          <ClientItem open={this.state.open} {...this.props} />
         </Row>
         <Row>
           <Col className='letters' xs={10} xsOffset={1}>
-            <Panel collapsible expanded={this.state.panelOpen}>
-              <Letter />
+            <Panel collapsible expanded={this.state.open}>
+              {this.props.letters.map(singleLetter =>
+                <Letter {...singleLetter.stakeholder} key={singleLetter.id} />)}
             </Panel>
-            <AddLetter onClick={() => { this.setState({ modalOpen: !this.state.modalOpen }) }}/>
+            <AddLetter
+              onClick={() => {this.setState({modalOpen: !this.state.modalOpen})}}
+            />
           </Col>
         </Row>
       </div>
