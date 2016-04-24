@@ -1,11 +1,11 @@
 import axios from 'axios'
 
-export const GET_USER_DETAILS = 'GET_USER_DETAILS'
+export const CLIENT_DATA = 'CLIENT_DATA'
 
-export const getUserDetails = () => {
-  const details = axios.get('/user-request')
+export const clientData = () => {
+  const data = axios.get('/api/clients')
   return {
-    type: GET_USER_DETAILS,
-    payload: 'some user details'
+    type: CLIENT_DATA,
+    payload: data
   }
 }
