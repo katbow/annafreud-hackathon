@@ -25,7 +25,7 @@ const ClientItem = (props) => {
           <p>{props.firstName}</p>
         </Col>
         <Col className='title' xs={3}>
-          <p>Topic</p>
+          <p>Stakeholders</p>
         </Col>
         <Col className='title' xs={3}>
           <p>Status</p>
