@@ -10,11 +10,13 @@ class ClinicianDashboard extends Component {
   }
 
   render () {
-    console.log(this.props.clientArray)
     return (
       <Grid>
         <Row>
-          <Client/>
+          {this.props.clientArray ?
+            this.props.clientArray.map(client =>
+              <Client key={client.id} {...client} />) :
+          'no data yet'}
         </Row>
       </Grid>
     )

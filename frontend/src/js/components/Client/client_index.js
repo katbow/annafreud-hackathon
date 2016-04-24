@@ -23,12 +23,13 @@ class Client extends React.Component {
     return (
       <div>
         <Row onClick={() => { this.setState({ panelOpen: !this.state.panelOpen }) }}>
-          <ClientItem open={this.state.panelOpen} />
+          <ClientItem open={this.state.panelOpen} {...this.props} />
         </Row>
         <Row>
           <Col className='letters' xs={10} xsOffset={1}>
-            <Panel collapsible expanded={this.state.panelOpen}>
-              <Letter />
+            <Panel collapsible expanded={this.state.open}>
+              {this.props.letters.map(singleLetter =>
+                <Letter {...singleLetter.stakeholder} key={singleLetter.id} />)}
             </Panel>
             <AddLetter toggleModal={this.toggleModal}/>
             <Modal show={this.state.showModal} onHide={this.toggleModal}>
